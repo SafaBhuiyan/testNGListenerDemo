@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.testNGListenerDemo.TestNGListener"/>
+  </listeners>
+  <test thread-count="5" name="group-demo-1(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testNGListenerDemo.GroupDemo1">
+        <methods>
+          <include name="test3"/>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- com.testNGListenerDemo.GroupDemo1 -->
+    </classes>
+  </test> <!-- group-demo-1(failed) -->
+  <test thread-count="5" name="group-demo-2(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testNGListenerDemo.GroupDemo2">
+        <methods>
+          <include name="test2"/>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- com.testNGListenerDemo.GroupDemo2 -->
+    </classes>
+  </test> <!-- group-demo-2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
